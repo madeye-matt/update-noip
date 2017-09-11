@@ -5,10 +5,10 @@
     "http://curlmyip.com"
   ],
   "Hostnames":[
-    "madeyesoftware.ddns.net"
+    "hostname.ddns.net"
   ],
-  "NoipUsername": "matt@madeye.com",
-  "NoipPassword": "4q6hfgtzca4l",
+  "NoipUsername": "example@example.com",
+  "NoipPassword": "password",
   "NoipUrl": "http://dynupdate.no-ip.com/nic/update?myip=%s&hostname=%s",
-  "NoipAdminEmail": "matt@madeye.com"
+  "NoipAdminEmail": "example@example.com"
 }
