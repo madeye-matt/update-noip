@@ -72,13 +72,15 @@ func getCurrentIp(config Config) string {
 
 		resp, err := client.Do(req)
 		if resp != nil {
-			log.Printf("Status: %d", resp.StatusCode)
+			//log.Printf("Status: %d", resp.StatusCode)
 			if resp.StatusCode == 200 {
 				body, err := ioutil.ReadAll(resp.Body)
 				resp.Body.Close()
 				checkError(err)
-				log.Printf("Body: %s", string(body))
-				return strings.TrimSpace(string(body))
+				//log.Printf("Body: %s", string(body))
+				ipAddress := strings.TrimSpace(string(body))
+				log.Printf("IP address: %s", ipAddress)
+				return ipAddress
 			}
 		} else {
 			log.Printf("Nil response!")
@@ -100,11 +102,11 @@ func updateNoip(config Config, ip string, hostname string) string {
 	resp, err := client.Do(req)
 	defer resp.Body.Close()
 	if resp != nil {
-		log.Printf("Status: %d", resp.StatusCode)
+		//log.Printf("Status: %d", resp.StatusCode)
 		if resp.StatusCode == 200 {
 			body, err := ioutil.ReadAll(resp.Body)
 			checkError(err)
-			log.Printf("Body: %s", string(body))
+			//log.Printf("Body: %s", string(body))
 			return strings.TrimSpace(string(body))
 		} else {
 			log.Printf("Failed to update: %s", resp.Status)
