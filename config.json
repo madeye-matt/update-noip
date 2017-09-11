@@ -1,0 +1,14 @@
+{
+  "Urls":[
+    "http://icanhazip.com",
+    "http://ifconfig.me/ip",
+    "http://curlmyip.com"
+  ],
+  "Hostnames":[
+    "madeyesoftware.ddns.net"
+  ],
+  "NoipUsername": "matt@madeye.com",
+  "NoipPassword": "4q6hfgtzca4l",
+  "NoipUrl": "http://dynupdate.no-ip.com/nic/update?myip=%s&hostname=%s",
+  "NoipAdminEmail": "matt@madeye.com"
+}
